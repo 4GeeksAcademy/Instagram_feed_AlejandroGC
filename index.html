@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/b178502fb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid mb-1">
+      <div class="logo d-flex align-items-center mb-1">
+        <a class="navbar-brand" href="#">
+          <div class="me-2 d-inline">
+            <i class="fa-brands fa-instagram fa-lg"></i>
+            <strong>Instagram</strong>
+          </div>
+        </a>
+      </div>
+      <!-- Burger mode -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- END Burger mode -->
+      <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-lg-0 d-flex">
+          <li class="nav-item me-3 mb-1">
+            <button type="button" class="btn btn-success h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Create new post</button>
+            <!-- MODAL -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label"><strong>Caption:</strong></label>
+                      <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <i class="fa-solid fa-camera ms-2"></i>
+                      <i class="fa-solid fa-location-dot ms-4"></i>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END MODAL -->
+          </li>
+          <!-- DROPDOWN -->
+          <li class="nav-item dropdown mb-1">
+            <button class="nav-link dropdown-toggle btn btn-secondary px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </li>
+          <!-- END DROPDOWN -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+  <!-- SELECTION MODE -->
+  <ul class="py-2 list-unstyled mb-3 d-flex justify-content-center" id="tablist" role="tablist">
+    <li class="px-3 nav-item" id="grid-mode" role="presentation">
+      <button class="nav-link active border-0" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+        <i class="fa-solid fa-table-cells fa-lg"></i>
+      </button>
+    </li>
+    <li class="px-3 nav-item" id="column-mode" role="presentation">
+      <button class="nav-link border-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+        <i class="fa-solid fa-square fa-lg"></i>
+      </button>
+    </li>
+  </ul>
+  <!-- END SELECTION MODE -->
+  <!-- INSTAGRAM MODE GRID -->
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+          <div class="row mx-0 mb-4 d-flex justify-content-center">
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://www.65ymas.com/uploads/s1/35/95/adopta-a-una-mascota-en-lugar-de-comprarla_1_621x621.jpeg" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://images.unsplash.com/photo-1497206365907-f5e630693df0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fHww" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs64L2LO5pyvd2EnICosvLjh8i7XzE_Q8kxQ&s" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://cdn.openai.com/dall-e-api-now-available-in-public-beta/draft-20221102a/1-original.jpg" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr7ORIuHxqO7kCxoLV-Wk_HaDOGcLi8ACT_Q&s" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://nsabers.es/cdn/shop/articles/a71d79bfdcb50254f97b14ac5a51abd1.png?v=1708781305" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://todoparatujardin.es/wp-content/uploads/2024/03/94229611-2c22-4479-ae8b-7d2e858814c8-1024x1024.jpg.webp" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://i.pinimg.com/originals/08/42/28/0842289912f3a5c426c7b58de95dfccf.jpg" alt="">
+            </div>
+            <div class="col-9 col-sm-6 col-lg-4 my-2">
+              <img class="w-100" src="https://www.todofondos.net/wp-content/uploads/1024x1024-El-mejor-fondo-de-pantalla-de-iPad-Sad-HD.jpg" alt="">
+            </div>
+          </div>
+      </div>
+      <!-- END INSTAGRAM MODE GRID -->
+      <!-- INSTAGRAM MODE COLUMN -->
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+          <!-- POST -->
+          <div class="post col-10 col-md-6 m-auto">
+            <div class="post-head">
+                <div class="post-profile col-9">
+                    <div class="img-profile">
+                        <img class="w-100" src="https://www.tiendanimal.es/articulos/wp-content/uploads/2023/10/raza-gato-azul-ruso-caracteristicas.jpg" alt="">
+                    </div>
+                    <div class="main">
+                        <div class="profile-name"><strong>AlejandroGC_cat</strong></div>
+                        <div class="place">WindowsXP</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
+            </div>
+            <div class="post-img">
+                <img class="w-100" src="https://www.65ymas.com/uploads/s1/35/95/adopta-a-una-mascota-en-lugar-de-comprarla_1_621x621.jpeg" alt="Post-img" srcset="">
+            </div>
+            <div class="post-foot">
+                <div class="post-icons">
+                    <div class="interact">
+                        <i class="fa-regular fa-heart fa-2x"></i>
+                        <i class="fa-regular fa-comment fa-2x"></i>
+                        <i class="fa-regular fa-paper-plane fa-2x"></i>
+                    </div>
+                    <div class="marker">
+                        <i class="fa-regular fa-bookmark fa-2x"></i>
+                    </div>
+                </div>
+                <p class="post-info">Liked by <strong>4GeeksAcademy</strong>, <strong>alejandrogc19</strong>, <strong>FullStackDevelopment</strong> and <strong>43 others.</strong></p>
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptas placeat illo consectetur. Distinctio vitae unde similique natus, impedit molestiae dolores, expedita corrupti eveniet, tempora ab consequatur aspernatur neque a!</p>
+            </div>
+          </div>
+          <!-- END POST -->
+          <!-- POST -->
+          <div class="post col-10 col-md-6 m-auto">
+            <div class="post-head">
+                <div class="post-profile col-9">
+                    <div class="img-profile">
+                        <img class="w-100" src="https://www.tiendanimal.es/articulos/wp-content/uploads/2023/10/raza-gato-azul-ruso-caracteristicas.jpg" alt="">
+                    </div>
+                    <div class="main">
+                        <div class="profile-name"><strong>AlejandroGC_cat</strong></div>
+                        <div class="place">WindowsXP</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
+            </div>
+            <div class="post-img">
+                <img class="w-100" src="https://images.unsplash.com/photo-1497206365907-f5e630693df0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fHww" alt="Post-img" srcset="">
+            </div>
+            <div class="post-foot">
+                <div class="post-icons">
+                    <div class="interact">
+                      <i class="fa-regular fa-heart fa-2x"></i>
+                      <i class="fa-regular fa-comment fa-2x"></i>
+                      <i class="fa-regular fa-paper-plane fa-2x"></i>
+                  </div>
+                  <div class="marker">
+                      <i class="fa-regular fa-bookmark fa-2x"></i>
+                  </div>
+                </div>
+                <p class="post-info">Liked by <strong>4GeeksAcademy</strong>, <strong>alejandrogc19</strong>, <strong>FullStackDevelopment</strong> and <strong>43 others.</strong></p>
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptas placeat illo consectetur. Distinctio vitae unde similique natus, impedit molestiae dolores, expedita corrupti eveniet, tempora ab consequatur aspernatur neque a!</p>
+            </div>
+          </div>
+          <!-- END POST -->
+          <!-- POST -->
+          <div class="post col-10 col-md-6 m-auto">
+            <div class="post-head">
+                <div class="post-profile col-9">
+                    <div class="img-profile">
+                        <img class="w-100" src="https://www.tiendanimal.es/articulos/wp-content/uploads/2023/10/raza-gato-azul-ruso-caracteristicas.jpg" alt="">
+                    </div>
+                    <div class="main">
+                        <div class="profile-name"><strong>AlejandroGC_cat</strong></div>
+                        <div class="place">WindowsXP</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
+            </div>
+            <div class="post-img">
+                <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs64L2LO5pyvd2EnICosvLjh8i7XzE_Q8kxQ&s" alt="Post-img" srcset="">
+            </div>
+            <div class="post-foot">
+                <div class="post-icons">
+                    <div class="interact">
+                      <i class="fa-regular fa-heart fa-2x"></i>
+                      <i class="fa-regular fa-comment fa-2x"></i>
+                      <i class="fa-regular fa-paper-plane fa-2x"></i>
+                  </div>
+                  <div class="marker">
+                      <i class="fa-regular fa-bookmark fa-2x"></i>
+                  </div>
+                </div>
+                <p class="post-info">Liked by <strong>4GeeksAcademy</strong>, <strong>alejandrogc19</strong>, <strong>FullStackDevelopment</strong> and <strong>43 others.</strong></p>
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptas placeat illo consectetur. Distinctio vitae unde similique natus, impedit molestiae dolores, expedita corrupti eveniet, tempora ab consequatur aspernatur neque a!</p>
+            </div>
+          </div>
+          <!-- END POST -->
+        </div>
+      </div>
+      <!-- INSTAGRAM MODE COLUMN -->
+  <!-- END INSTAGRAM -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
